@@ -7,3 +7,30 @@ sudo apt-get -y install cuda
 sudo reboot
 
 #sudo apt install nvidia-cuda-toolkit
+#https://gist.github.com/raulqf/f42c718a658cddc16f9df07ecc627be7
+
+cmake -D CMAKE_BUILD_TYPE=RELEASE \
+	-D CMAKE_C_COMPILER=/usr/bin/gcc-6 \
+-D CMAKE_INSTALL_PREFIX=/usr/local \
+-D INSTALL_PYTHON_EXAMPLES=ON \
+-D INSTALL_C_EXAMPLES=OFF \
+-D WITH_TBB=ON \
+-D WITH_CUDA=ON \
+-D BUILD_opencv_cudacodec=OFF \
+-D ENABLE_FAST_MATH=1 \
+-D CUDA_FAST_MATH=1 \
+-D WITH_CUDNN=ON \
+-D OPENCV_DNN_CUDA=ON \
+-D CUDA_ARCH_BIN=7.5 \
+-D WITH_CUBLAS=1 \
+-D WITH_V4L=ON \
+-D WITH_QT=OFF \
+-D WITH_OPENGL=ON \
+-D WITH_GSTREAMER=ON \
+-D OPENCV_GENERATE_PKGCONFIG=ON \
+-D OPENCV_PC_FILE_NAME=opencv.pc \
+-D OPENCV_ENABLE_NONFREE=ON \
+-D OPENCV_PYTHON3_INSTALL_PATH=/home/thtai/.local/lib/python3.6/site-packages \
+-D OPENCV_EXTRA_MODULES_PATH=/tmp/opencv_contrib-4.2.0/modules \
+-D PYTHON_EXECUTABLE=/usr/lib/python3.6 \
+-D BUILD_EXAMPLES=ON ..
