@@ -44,3 +44,7 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 nproc
 make -j8
 sudo make install
+
+
+pip3 install https://github.com/cupy/cupy/releases/download/v8.0.0rc1/cupy_cuda110-8.0.0rc1-cp36-cp36m-manylinux1_x86_64.whl
+Collecting cupy-cuda110==8.0.0rc1
