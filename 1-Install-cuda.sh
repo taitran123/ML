@@ -6,4 +6,4 @@ sudo apt-get update
 sudo apt-get -y install cuda
 sudo reboot
 
-#
+#sudo apt install nvidia-cuda-toolkit
