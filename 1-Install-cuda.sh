@@ -21,7 +21,8 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D CUDA_FAST_MATH=1 \
 -D WITH_CUDNN=ON \
 -D OPENCV_DNN_CUDA=ON \
--D CUDA_ARCH_BIN=7.5 \
+-D CUDA_ARCH_BIN=7.0 \
+-D BUILD_TIFF=ON \
 -D WITH_CUBLAS=1 \
 -D WITH_V4L=ON \
 -D WITH_QT=OFF \
@@ -30,7 +31,16 @@ cmake -D CMAKE_BUILD_TYPE=RELEASE \
 -D OPENCV_GENERATE_PKGCONFIG=ON \
 -D OPENCV_PC_FILE_NAME=opencv.pc \
 -D OPENCV_ENABLE_NONFREE=ON \
--D OPENCV_PYTHON3_INSTALL_PATH=/home/thtai/.virtualenvs/cv/lib/python3.6/site-packages \
+-D OPENCV_PYTHON3_INSTALL_PATH=/home/thtai/Source/pycam-detect/exe_code/lib/python3.6/site-packages \
 -D OPENCV_EXTRA_MODULES_PATH=/tmp/opencv_contrib-4.2.0/modules \
--D PYTHON_EXECUTABLE=/home/thtai/.virtualenvs/cv/bin/python3 \
+-D PYTHON_EXECUTABLE=/home/thtai/Source/pycam-detect/exe_code/bin/python3 \
 -D BUILD_EXAMPLES=ON ..
+
+
+
+
+
+
+nproc
+make -j8
+sudo make install
